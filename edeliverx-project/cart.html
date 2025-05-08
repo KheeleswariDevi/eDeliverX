@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">eDeliverX</a>
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="account.html">Sign in</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="cart-items">
+            <h2>Cart</h2>
+            <div id="cartItemList"></div>
+            <div id="orderSummary">
+                <div id="productTotal"></div>
+                <div id="shippingFee"></div>
+                <div id="orderTotal"></div>
+            </div>
+            
+            
+            <script>
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                // Display the cart items on the page
+                const cartItemList = document.getElementById('cartItemList');
+                const productTotal = document.getElementById('productTotal');
+                const shippingFee = document.getElementById('shippingFee');
+                const orderTotal = document.getElementById('orderTotal');
+                renderCartItems();
+
+                function renderCartItems() {
+                    cartItemList.innerHTML = '';
+                    let total = 0;
+
+                    cartItems.forEach((item, index) => {
+                        const cartItem = document.createElement('div');
+                        cartItem.classList.add('cart-item');
+
+                        const itemImage = document.createElement('img');
+                        itemImage.src = item.image; // Set the image source
+                        itemImage.alt = item.name; // Set the alt attribute
+                        itemImage.classList.add('item-image');
+                        cartItem.appendChild(itemImage);
+                        itemImage.style.width = '100px'; // Change the width to the desired size
+                        
+                        const quantity = document.createElement('p');
+                        quantity.classList.add('quantity');
+                        quantity.textContent = `${item.quantity}x`;
+                        cartItem.appendChild(quantity);
+
+                        const price = document.createElement('p');
+                        price.classList.add('price');
+                        price.textContent = `Price ${item.price}€`;
+                        cartItem.appendChild(price);
+
+                        const itemName = document.createElement('p');
+                        itemName.textContent = item.name;
+                        cartItem.appendChild(itemName);
+
+                        const deleteButton = document.createElement('button');
+                        deleteButton.classList.add('delete-button');
+                        deleteButton.textContent = 'Delete';
+                        deleteButton.addEventListener('click', () => deleteItem(index));
+                        cartItem.appendChild(deleteButton);
+
+                        cartItemList.appendChild(cartItem);
+                        total += item.quantity * item.price;
+                    });
+
+                    const shippingFeeAmount = total >= 500 ? 0 : 3.99; // Shipping fee is 3.99 for orders below 350 euro
+                    const orderTotalAmount = total + shippingFeeAmount;
+
+                    productTotal.innerHTML = `Product Total: ${total.toFixed(2)}€`;
+                    shippingFee.innerHTML = `Shipping Fee: ${shippingFeeAmount.toFixed(2)}€`;
+                    orderTotal.innerHTML = `Order Total: ${orderTotalAmount.toFixed(2)}€`;
+                }
+
+                function deleteItem(index) {
+                    const item = cartItems[index];
+                    if (item.quantity > 1) {
+                        item.quantity--;
+                    } else {
+                        cartItems.splice(index, 1);
+                    }
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    renderCartItems();
+                }
+            </script>
+        </div>
+
+        <div id="paymentForm">
+            <h3>Payment Details</h3>
+            <input type="text" id="cardNumber" placeholder="Card Number">
+            <input type="text" id="expiryDate" placeholder="Expiry Date">
+            <input type="text" id="cvv" placeholder="CVV">
+            <button id="payButton" onclick="processPayment()">Pay</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> info@edeliverx.com</p>
+            <p><strong>Phone:</strong> +1 123-456-7890</p>
+            <p><a href="contact.html">Go to Contact Us page</a></p>
+        </div>
+        <div class="social-media-icons">
+            <a href="#"><img src="images/insta.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+            <a href="#"><img src="images/face.png" alt="Facebook" style="width: 30px; height: 30px;"></a>
+            <a href="#"><img src="images/twit.png" alt="Twitter" style="width: 30px; height: 30px;"></a>
+        </div>
+    </footer>

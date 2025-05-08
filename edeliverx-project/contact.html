@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Online Store</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="/">eDeliverX</a>
+        </div>
+        <div class="navbar-right">
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="account.html">Sign in</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </form>
+    <div id="message-container"></div>
+</div>
+    </div>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> info@edeliverx.com</p>
+            <p><strong>Phone:</strong> +1 123-456-7890</p>
+            <p><a href="contact.html">Go to Contact Us page</a></p>
+        </div>
+        <div class="social-media-icons">
+            <a href="#"><img src="images/insta.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+            <a href="#"><img src="images/face.png" alt="Facebook" style="width: 30px; height: 30px;"></a>
+            <a href="#"><img src="images/twit.png" alt="Twitter" style="width: 30px; height: 30px;"></a>
+        </div>
+    </footer>
+    
+    <script>
+        var form = document.getElementById('contact-form');
+        var messageStatus = document.getElementById('message-status');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get the form field values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+    
+            // Perform form validation
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                messageStatus.textContent = 'Please fill in all the required fields.';
+                return;
+            }
+    
+            // Validate email format
+            if (!isValidEmail(email)) {
+                messageStatus.textContent = 'Please enter a valid email address.';
+                return;
+            }
+    
+            // Display the success message
+            messageStatus.textContent = 'Your message has been sent.';
+            form.reset();
+        });
+    
+        // Function to validate email format
+        function isValidEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>

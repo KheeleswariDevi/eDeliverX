@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/products.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">eDeliverX</a>
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <input class="search-bar" type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton" class="search-button">Search</button>
+            <a href="account.html">Sign in</a>
+        </div>
+    </div>
+    <h1 class="title">Products</h1>
+
+    <h2>Computers</h2>
+<ul>
+    <li>
+        <img src="images/Acer_Aspire3.png.webp" alt="Computer 1">
+        <p>Acer Aspire 3</p>
+        <p>Price: $549.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('Acer')" data-product-name="Acer Aspire 3">Learn More</button>
+            <button onclick="addToCart('Acer Aspire 3', 1, 549.00, 'images/Acer_Aspire3.png.webp')">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Samsung_GalaxyBook3_Pro.webp" alt="Computer 2">
+        <p>Samsung Galaxy Book 3 Pro</p>
+        <p>Price: $1,799</p>
+        <div class="product-buttons">         
+            <button class="learn-more-button"onclick="learnMore('Samsung')" data-product-name="Samsung Galaxy Book 3 Pro">Learn More</button>
+            <button onclick="addToCart('Samsung Galaxy Book 3 Pro', 1, 1799, 'images/Samsung_GalaxyBook3_Pro.webp')">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/MacbookAir.jpg.webp" alt="Computer 3">
+        <p>Macbook Air</p>
+        <p>Price: $1,200</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('Macbook')" data-product-name="Macbook Air">Learn More</button>
+            <button onclick="addToCart('MacbookAir', 1,1200, 'images/MacbookAir.jpg.webp')">Add to Cart</button>
+        </div>
+    </li>
+</ul>
+
+<h2>TVs</h2>
+<ul>
+    <li>
+        <img src="images/Samsung_75inch.jpg" alt="TV 1">
+        <p>Samsung 75 inches</p>
+        <p>Price: $945.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('Samsung')" data-product-name="Samsung 75 inches">Learn More</button>
+            <button onclick="addToCart('Samsung 75 inches', 1, 945.00, 'images/Samsung_75inch.jpg')">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/LG_43.webp" alt="TV 2">
+        <p>LG 43 inches</p>
+        <p>Price: $399.99</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('LG')"  data-product-name="LG 43 inches">Learn More</button>
+            <button onclick="addToCart('LG 43 inches', 1, 399.00, 'images/LG_43.webp')">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Sony_75.webp" alt="TV 3">
+        <p>Sony 75 inches</p>
+        <p>Price: $1599.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('Sony')" data-product-name="Sony 75 inches">Learn More</button>
+            <button onclick="addToCart('Sony 75', 1, 1599.00, 'images/Sony_75.webp')">Add to Cart</button>
+        </div>
+    </li>
+</ul>
+
+<h2>Phones</h2>
+<ul>
+    <li>
+        <img src="images/Galaxy_A14-5g.avif" alt="Phone 1">
+        <p>Galaxy A14</p>
+        <p>Price: $207.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button"onclick="learnMore('Galaxy')" data-product-name="Galaxy A14">Learn More</button>
+            <button onclick="addToCart('Galaxy A14', 1,207.00, 'images/Galaxy_A14-5g.avif')">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Huawei_Mate50_Pro.jpg" alt="Phone 2">
+        <p>Huawei Mate 50 Pro</p>
+        <p>Price: $620.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('Huawei')" data-product-name="Huawei Mate 50 Pro">Learn More</button>
+            <button onclick="addToCart('Huawei Mate 50 Pro', 1, 620.00, 'images/Huawei_Mate50_Pro.jpg')">Add to Cart</button>
+        </div>
+    </li>
+    <li>
+        <img src="images/Iphone13_ProMax.jpeg" alt="Phone 3">
+        <p>Iphone 13 Pro Max</p>
+        <p>Price: $880.00</p>
+        <div class="product-buttons">
+            <button class="learn-more-button" onclick="learnMore('Iphone 13')" data-product-name="Iphone 13 Pro Max">Learn More</button>
+            <button onclick="addToCart('Iphone 13 Pro Max', 1, 880.00, 'images/Iphone13_ProMax.jpeg')">Add to Cart</button>
+        </div>
+    </li>
+</ul>
+
+<footer class="footer">
+    <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> info@edeliverx.com</p>
+        <p><strong>Phone:</strong> +1 123-456-7890</p>
+        <p><a href="contact.html">Go to Contact Us page</a></p>
+    </div>
+    <div class="social-media-icons">
+        <a href="#"><img src="images/insta.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+        <a href="#"><img src="images/face.png" alt="Facebook" style="width: 30px; height: 30px;"></a>
+        <a href="#"><img src="images/twit.png" alt="Twitter" style="width: 30px; height: 30px;"></a>
+    </div>
+</footer>
+
+<script>
+    
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    searchButton.addEventListener('click', function () {
+        const searchTerm = searchInput.value.trim();
+        
+        // Implement your search logic here (e.g., navigate to a search results page or display search results).
+        alert("Performing a search for: " + searchTerm);
+    });
+
+    // Allow the user to submit the search by pressing Enter in the search input field
+    searchInput.addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            searchButton.click(); // Trigger a click event on the search button
+        }
+    });
+
+    // Function to handle "Learn More" button click
+    function learnMore(productName) {
+        // You can implement your logic here, e.g., show product details
+        switch (productName) {
+            case 'Acer':
+                alert(" Processor: Intel Core \n RAM: 8GB \n Storage: 512GB SSDs and 1TB HDDs")
+                break;
+            case 'Samsung':
+                alert(" Processor: Intel Core i7 \n RAM: 16GB \n Storage: 512GB SSDs")
+                break;
+            case 'Macbook':
+                alert(" Processor: M1 chip \n RAM: 16GB \n Storage: 256GB SSDs")
+                break;
+            case 'Samsung':
+                alert(" Display: LED or QLED \n Connectivity: HDMI \n Blu-ray players \n USB ports \n Resolution: 4K Ultra HD (3840 x 2160 pixels)")
+                break;
+            case 'LG':
+                alert(" Display: LED or OLED \n Connectivity: HDMI \n Blu-ray players \n USB ports \n Resolution:  Full HD (1920 x 1080 pixels)")
+                break;
+            case 'Sony':
+                alert(" Display: LED or OLED \n Connectivity: HDMI \n Blu-ray players \n USB ports  Resolution: 4K Ultra HD (3840 x 2160 pixels)")
+                break;
+            case 'Galaxy':
+                alert(" Display: Size of around 6.5 to 6.6 inches \n RAM and Storage: 4GB, 64GB \n Connectivity: 4G LTE, Wi-Fi, Bluetooth, and GPS")
+                break;
+            case 'Huawei':
+                alert(" Display: OLED display with a size of 6.76 inches \n RAM and Storage: 12GB, 256GB \n Connectivity: 4G LTE, Wi-Fi, Bluetooth, and GPS, NFC for contactless \n payments and has a USB Type-C port for charging and data transfer")
+                break;
+            case 'Iphone 13':
+                alert(" Display: Super Retina XDR display with a size of 6.7 inches \n Storage: 512GB \n Connectivity: 5G, Wi-Fi 6, Bluetooth, NFC, GPS, Lightning connector")
+                break;
+            default:
+                alert("This product has no details")
+        }
+
+        // Append the information directly under the "Learn More" button
+        const detailsParagraph = document.createElement('p');
+        detailsParagraph.innerHTML = `${productName} details: Insert your detailed information here.`;
+
+        // Find the parent node of the button (li element) and append the details paragraph
+        const learnMoreButton = document.querySelector(`button[data-product-name="${productName}"]`);
+        learnMoreButton.parentNode.appendChild(detailsParagraph);
+    }
+
+
+    function addToCart(productName, quantity, price, image) {
+    // Retrieve the cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Check if the product already exists in the cart
+    const existingItemIndex = cartItems.findIndex(item => item.name === productName);
+
+    if (existingItemIndex > -1) {
+        // If the product already exists, update the quantity
+        cartItems[existingItemIndex].quantity += quantity;
+    } else {
+        // If the product is new, add it to the cart
+        cartItems.push({ name: productName, quantity, price, image});
+    }
+
+    // Save the updated cart items to localStorage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    // Show a confirmation message
+    alert('Product added to cart!');
+}
+
+</script>
+</body>
+</html>

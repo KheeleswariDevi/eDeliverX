@@ -1,0 +1,219 @@
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #041d2e; /* Blue background color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Increase padding for both top/bottom and left/right */
+}
+
+/* Style the navbar links */
+.navbar-left a {
+    color: yellow; /* Make the links yellow */
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold; /* Make "About Us" title bold */
+    font-size: 18px; /* Adjust font size to your preference */
+}
+
+/* Style the eDeliverX logo */
+.navbar-left {
+    font-size: 1.5em; /* Adjust font size to your preference */
+}
+
+.navbar-right a {
+    display: inline-block;
+    background-color: yellow;
+    color: black; /* Text color */
+    padding: 10px 20px; /* Increase padding for both top/bottom and left/right */
+    margin-right: 20px;
+    border-radius: 8px; /* Increase border radius */
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size to your preference */
+}
+
+/* Center the cart and payment form on the page */
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Adjust to space between the two elements */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px;
+}
+
+/* Style for the cart */
+.cart-items {
+    top: 0;
+    left: 0;
+    width: calc(50% - 20px); /* Adjust the width to take up half of the available space */
+    margin: 20px 10px; /* Center the cart horizontally with top and bottom margin */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Style the individual cart item */
+.cart-item {
+    width: 100%;
+    max-width: 480px; /* Set a maximum width for the cart items */
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center; /* Center content horizontally */
+}
+
+/* Style the item image */
+.item-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin to separate image from other content */
+}
+
+.quantity,
+.price,
+.itemName {
+    margin: 10px 0; /* Add space above and below the text */
+    font-size: 16px;
+    text-align: center; /* Center text horizontally */
+}
+
+.quantity::before,
+.quantity::after,
+.price::before,
+.price::after,
+.itemName::before,
+.itemName::after {
+    content: "\00a0\00a0"; /* Add space before and after the text */
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Adjust padding for more space */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; /* Add space above the delete button */
+    margin-left: auto; /* Move the delete button to the right */
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Style the order summary section */
+#orderSummary {
+    margin-top: 20px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 10px;
+}
+
+#productTotal,
+#shippingFee,
+#orderTotal {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#paymentForm {
+    top: 0;
+    right: 0;
+    width: calc(50% - 20px); /* Adjust the width to take up half of the available space */
+    margin: 20px 10px; /* Add space between cart and payment form */
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px; /* Adjust padding to your preference */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text horizontally */
+}
+
+#paymentForm h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Style the individual payment fields */
+#cardNumber,
+#expiryDate,
+#cvv {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+#payButton {
+
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Make the button a block element to center it */
+    }
+    
+
+#payButton:hover {
+    background-color: #218838;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #041d2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px; /* Add margin to the top */
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+.footer a:hover {
+    background-color: white; /* Set the background color to white on hover */
+    color: #041d2e; /* Set the text color to the desired highlighted color */
+}

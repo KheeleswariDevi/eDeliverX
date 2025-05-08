@@ -1,0 +1,118 @@
+/* Reset default margin and padding */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+/* Style the navbar */
+.navbar {
+  background-color: #041d2e; /* Blue background color */
+  color: white; /* Text color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Increase padding for both top/bottom and left/right */
+}
+
+/* Style the navbar links */
+.navbar-left a {
+  color: yellow; /* Make the links yellow */
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold; /* Make "About Us" title bold */
+  font-size: 18px; /* Adjust font size to your preference */
+}
+
+/* Style the eDeliverX logo */
+.navbar-left {
+  font-size: 1.5em; /* Adjust font size to your preference */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right a {
+  display: inline-block;
+  background-color: yellow;
+  color: black; /* Text color */
+  padding: 8px 12px; /* Adjust padding for both top/bottom and left/right */
+  margin-right: 10px;
+  border-radius: 8px; /* Increase border radius */
+  text-decoration: none;
+  font-size: 18px; /* Adjust font size to your preference */
+}
+
+/* Add this CSS rule to keep the "Sign In" button on one line */
+.navbar-right a:last-child {
+  white-space: nowrap;
+}
+
+    .container {
+        width: 800px; /* Increase container width */
+        height: 400px;
+        margin: 90px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    input[type=text], textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 50px; /* Adjust padding for both top/bottom and left/right */
+        border: none;
+        cursor: pointer;
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Change the button to a block-level element */
+    }
+
+    #message-status {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+/* Style the footer */
+.footer {
+  background-color: #041d2e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px; /* Add margin to the top */
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer a {
+  color: white; /* Set the link color to white */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+.footer a:hover {
+  background-color: white; /* Set the background color to white on hover */
+  color: #041d2e; /* Set the text color to the desired highlighted color */
+}

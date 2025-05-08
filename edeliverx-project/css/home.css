@@ -1,0 +1,133 @@
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #041d2e; /* Blue background color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Increase padding for both top/bottom and left/right */
+}
+
+/* Style the navbar links */
+.navbar-left a {
+    color: yellow; /* Make the links yellow */
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold; /* Make "About Us" title bold */
+    font-size: 18px; /* Adjust font size to your preference */
+}
+
+/* Style the search bar */
+.search-bar {
+    padding: 10px; /* Increase padding */
+    border: none;
+    border-radius: 8px; /* Increase border radius */
+    width: 250px; /* Increase width */
+}
+
+/* Style the search button */
+.search-button {
+    background-color: yellow; /* Blue background color */
+    color: rgb(0, 0, 0); /* Text color */
+    border: none;
+    padding: 10px 10px; /* Adjust padding for both top/bottom and left/right */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 12px; /* Adjust font size */
+}
+
+.search-button:hover {
+    background-color: yellow; /* Darker blue on hover */
+}
+
+/* Style the eDeliverX logo */
+.navbar-left {
+    font-size: 1.5em; /* Adjust font size to your preference */
+}
+
+.navbar-right a {
+    display: inline-block;
+    background-color: yellow;
+    color: black; /* Text color */
+    padding: 10px 20px; /* Increase padding for both top/bottom and left/right */
+    margin-right: 20px;
+    border-radius: 8px; /* Increase border radius */
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size to your preference */
+}
+
+/* Style the title */
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style the images */
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 1000px; /* Updated image width */
+    height: auto;
+    margin: 10px;
+}
+
+/* Style the "About Us" section */
+.about-us {
+    display: flex;
+    align-items: flex-start; /* Align text to the top */
+}
+
+.about-us-left {
+    flex: 3;
+    margin-left: 80px; /* Add margin to the left */
+    margin-top: 100px;
+    font-size: large;
+}
+
+.about-us-right {
+    flex: 8;
+    padding: 20px; /* Reduced padding */
+}
+
+/* Style the footer */
+.footer {
+    background-color: #041d2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px; /* Add margin to the top */
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+.footer a:hover {
+    background-color: white; /* Set the background color to white on hover */
+    color: #041d2e; /* Set the text color to the desired highlighted color */
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Online Store</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="/">eDeliverX</a>
+        </div>
+        <div class="navbar-right">
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <input class="search-bar" type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton" class="search-button">Search</button>
+            <a href="account.html">Sign up</a>
+        </div>
+    </div>
+    <h1 class="title">eDeliverX Online Store</h1>
+
+    <div class="image-container">
+        <img class="image1" src="images/p1.jpg" alt="My Image">
+        <img class="image2" src="images/p2.jpg" alt="My Image">
+    </div>
+
+    <div class="about-us">
+        <div class="about-us-left">
+            <p><strong>About Us</strong></p>
+        </div>
+        <div class="about-us-right">
+            <p>At eDeliverX, we specialize in helping electronic product retailers make a seamless transition to online platforms using Amazon Web Services (AWS). Our goal is to provide you with a comprehensive understanding of web app functionality and IT infrastructure while ensuring scalability and flexibility even during peak demand periods like Black Friday and Christmas.</p>
+            <p>With our expertise in e-commerce and AWS, we offer tailored solutions that empower you to offer delivery facilities as part of your products. Our focus on leveraging AWS ensures a scalable and reliable infrastructure, while our app simplifies and enhances your delivery services.</p>
+            <p>We pride ourselves on our customer-centric approach, aligning our solutions with the needs of your customer, marketing, and logistics departments. By exclusively utilizing AWS, we provide a secure and scalable foundation for your online platform.</p>
+            <p>Join us at eDeliverX and unlock the full potential of your electronic retail business online. Let's create an exceptional shopping experience and drive your business growth together.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> info@edeliverx.com</p>
+            <p><strong>Phone:</strong> +1 123-456-7890</p>
+            <p><a href="contact.html">Go to Contact Us page</a></p>
+        </div>
+        <div class="social-media-icons">
+            <a href="#"><img src="images/insta.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+            <a href="#"><img src="images/face.png" alt="Facebook" style="width: 30px; height: 30px;"></a>
+            <a href="#"><img src="images/twit.png" alt="Twitter" style="width: 30px; height: 30px;"></a>
+        </div>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+
+        searchButton.addEventListener('click', function () {
+            const searchTerm = searchInput.value.trim();
+
+            // Implement your search logic here (e.g., navigate to a search results page or display search results).
+            alert("Performing a search for: " + searchTerm);
+        });
+
+        // Allow the user to submit the search by pressing Enter in the search input field
+        searchInput.addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                searchButton.click(); // Trigger a click event on the search button
+            }
+        });
+    </script>
+</body>
+</html>
